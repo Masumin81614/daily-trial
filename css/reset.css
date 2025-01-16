@@ -1,0 +1,102 @@
+/*================================================================
+Chrome/Firefox/Edge/Safariなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* フォーム要素のリセット */
+button,
+input,
+select,
+textarea {
+  background: none; /* 背景色を削除 */
+  border: none; /* 枠線を削除 */
+  font: inherit; /* フォントを親要素から継承 */
+  color: inherit; /* 文字色を親要素から継承 */
+  text-align: inherit; /* テキストの位置を親要素から継承 */
+  display: inline-block; /* ボックスモデルをインラインブロックに変更 */
+  width: auto; /* 幅を自動に設定 */
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer; /* クリック可能であることを示すカーソル */
+}
+
+textarea {
+  resize: none; /* テキストエリアのリサイズを無効化 */
+}
+
+/* フォーム要素にフォーカス時のアウトラインをリセット */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none; /* フォーカス時のデフォルトのアウトラインを削除 */
+}
